@@ -1,0 +1,77 @@
+#context-token-counter-display {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(20, 20, 25, 0.92);
+    border: 1px solid rgba(100, 100, 110, 0.4);
+    border-radius: 6px;
+    padding: 8px 12px;
+    min-width: 140px;
+    z-index: 9999;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    cursor: move;
+    user-select: none;
+}
+
+#context-token-counter-display:hover {
+    background: rgba(25, 25, 30, 0.95);
+    border-color: rgba(120, 120, 130, 0.5);
+}
+
+.counter-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.counter-label {
+    font-size: 9px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+}
+
+.counter-value {
+    font-size: 13px;
+    font-weight: 600;
+    color: #b0b0b5;
+    font-variant-numeric: tabular-nums;
+}
+
+.counter-remaining {
+    font-size: 10px;
+    color: #707075;
+}
+
+.counter-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 2px;
+}
+
+.counter-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #6b7280, #9ca3af);
+    transition: width 0.3s ease, background 0.3s ease;
+    width: 0%;
+}
+
+.counter-bar-fill.warning {
+    background: linear-gradient(90deg, #d97706, #f59e0b);
+}
+
+.counter-bar-fill.danger {
+    background: linear-gradient(90deg, #dc2626, #ef4444);
+}
+
+/* Dragging state */
+#context-token-counter-display.dragging {
+    opacity: 0.8;
+    cursor: grabbing;
+}
