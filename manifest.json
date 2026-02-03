@@ -5,7 +5,8 @@
   "optional": [],
   "js": "index.js",
   "css": "style.css",
-  "author": "Your Name",
+  "author": "JimRook",
   "version": "1.0.0",
-  "homePage": "https://github.com/username/context-token-counter"
+  "homePage": "https://github.com/JimRook/context-counter",
+  "auto_update": true
 }
